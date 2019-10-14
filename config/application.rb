@@ -32,9 +32,6 @@ module WeatherApp
     # the framework and any gems in your application.
     Dir.glob(Rails.root.join('app/serializers/*.rb')).each { |f| require f }
     
-    config.enable_dependency_loading = true
-    config.eager_load_paths << Rails.root.join('app/serializers')
-
     # Don't generate system test files.
     config.generators.system_tests = nil
   end
