@@ -45,8 +45,6 @@ export default class TempCard extends Component {
               <Row className="mb-3">
                 <Col>
                   <Card.Title>TEMP: {this.state.temp}°</Card.Title>
-                </Col>
-                <Col>
                   <ButtonToolbar size="sm">
                     <Button
                       onClick={() => this.setCurrentTempUnit("F")}
@@ -72,7 +70,8 @@ export default class TempCard extends Component {
               <Row>
                 <Col>
                   <Card.Title className="mt-3">
-                    High: {weather.temp_max}°F | Low: {weather.temp_min}°F
+                    Avg: {weather.average_in_f}°F | High: {weather.temp_max}°F |
+                    Low: {weather.temp_min}°F
                   </Card.Title>
                 </Col>
               </Row>
