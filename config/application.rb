@@ -32,7 +32,7 @@ module WeatherApp
     # the framework and any gems in your application.
     config.enable_dependency_loading = true
     config.autoload_paths << Rails.root.join('lib')
-    Dir.glob(Rails.root.join('app/serializers/**/*.rb')).each { |f| require f }
+    Dir.glob(Rails.root.join('app/serializers/*.rb')).each { |f| require f }
 
     # Don't generate system test files.
     config.generators.system_tests = nil
