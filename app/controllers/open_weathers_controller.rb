@@ -1,4 +1,6 @@
 class OpenWeathersController < ApplicationController
+    include TempConversionHelper
+
 
     def index
         result = RequestOpenWeatherApi.new(params[:zip]).call

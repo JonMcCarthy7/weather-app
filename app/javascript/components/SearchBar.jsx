@@ -10,12 +10,14 @@ export default class SearchBar extends Component {
             <InputGroup.Text>ZipCode</InputGroup.Text>
           </InputGroup.Prepend>
           <FormControl
-            placeholder="eg: 12345"
+            placeholder={this.props.zipCode || "e.g. 12345"}
             aria-label="zip_code"
             onChange={e => this.props.getZipCode(e.target.value)}
           />
           <InputGroup.Append>
-            <Button onClick={this.props.handleSubmit}>Search</Button>
+            <Button variant="secondary" onClick={this.props.handleSubmit}>
+              Search
+            </Button>
           </InputGroup.Append>
         </InputGroup>
       </Row>
