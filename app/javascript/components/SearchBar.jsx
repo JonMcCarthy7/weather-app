@@ -10,7 +10,8 @@ export default class SearchBar extends Component {
             <InputGroup.Text>ZipCode</InputGroup.Text>
           </InputGroup.Prepend>
           <FormControl
-            placeholder={this.props.zipCode || "e.g. 12345"}
+            placeholder={"e.g. 12345"}
+            value={this.props.zipCode}
             aria-label="zip_code"
             onChange={e => this.props.getZipCode(e.target.value)}
           />

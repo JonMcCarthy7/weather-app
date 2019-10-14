@@ -11,8 +11,18 @@ import {
 export default class TempCard extends Component {
   state = {
     weather: this.props.weather,
-    temp: this.props.weather.fahrenheit
+    temp: ""
   };
+
+  componentDidUpdate(prevProps) {
+    // Typical usage (don't forget to compare props):
+    if (this.props.weather !== prevProps.weather) {
+      this.setState({
+        weather: this.props.weather,
+        temp: this.props.weather.fahrenheit
+      });
+    }
+  }
 
   setCurrentTempUnit = unit => {
     switch (unit) {
@@ -31,7 +41,7 @@ export default class TempCard extends Component {
   };
 
   render() {
-    let weather = this.state.weather;
+    let weather = this.props.weather;
     if (weather) {
       return (
         <Col>

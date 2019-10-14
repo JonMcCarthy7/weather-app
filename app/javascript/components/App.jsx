@@ -73,22 +73,18 @@ export default class App extends Component {
     this.setState({ zipCode });
   };
 
-  renderTempCard = () => {
-    if (this.state.weather) {
-      return (
-        <TempCard
-          weather={this.state.weather}
-          saveLocation={this.saveLocation}
-          refresh={this.refresh}
-        />
-      );
-    }
-    return (
-      <Col>
-        <h3>Enter a zip code to get the current weather</h3>
-      </Col>
-    );
-  };
+  // renderTempCard = () => {
+  //   if (this.state.weather) {
+  //     return (
+
+  //     );
+  //   }
+  //   return (
+  //     <Col>
+  //       <h3>Enter a zip code to get the current weather</h3>
+  //     </Col>
+  //   );
+  // };
 
   refresh = () => this.handleSubmit();
 
@@ -119,7 +115,11 @@ export default class App extends Component {
               handleClick={this.handleClick}
               savedZipCodes={this.state.savedZipCodes}
             />
-            {this.renderTempCard()}
+            <TempCard
+              weather={this.state.weather}
+              saveLocation={this.saveLocation}
+              refresh={this.refresh}
+            />
           </Row>
         </Container>
       </>

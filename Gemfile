@@ -22,6 +22,7 @@ gem 'react-rails'
 
 gem 'httparty'
 gem 'oj'
+gem 'rails_12factor'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

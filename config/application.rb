@@ -31,6 +31,7 @@ module WeatherApp
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
     Dir.glob(Rails.root.join('app/serializers/*.rb')).each { |f| require f }
+    
     config.enable_dependency_loading = true
     config.eager_load_paths << Rails.root.join('app/serializers')
 
